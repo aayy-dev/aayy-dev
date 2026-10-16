@@ -4,7 +4,7 @@
 
 <p align="center"><b>AI-driven development · Linux &amp; Android internals · iOS tweaks · homelab · finance automation</b></p>
 
-I build tools for the phones, computers and systems I use every day, working alongside AI coding agents: I scope the problem, the agent drafts and runs, and I test and verify what ships. Most of my work sits close to the OS: jailbreak tweaks, Android system modules, custom ROMs, bootloaders and build pipelines.
+I build tools for the phones, computers and systems I use every day, and most of my work sits close to the OS: jailbreak tweaks, Android system modules, custom ROMs, bootloaders and build pipelines. The part I enjoy most is working out why something that should work doesn't.
 
 ## Projects
 
@@ -27,11 +27,13 @@ Work that lives on my own machines rather than in public repos:
 - **Hackintosh and multi-boot**: OpenCore on a Ryzen 7 5700X3D with a Radeon RX 580, plus OCLP and macOS / Windows / Debian multi-boot on older Macs.
 - **Homelab and Linux**: Debian servers, a Caddy reverse proxy, self-hosted remote desktop, and SSH-based automation.
 - **Finance automation (FP&A day job)**: VB.NET business rules in OneStream that replace a manual reporting workbook and are validated against it, plus Python pipelines that clean Excel exports for loading, with built-in total checks.
-- **Personal data pipelines**: deduplicated a 90 GB, 14,000-file music library using SHA-256 hashes while keeping streaming-app playlists intact; built a pipeline that mines thousands of exported AI conversations into an evidence log for my annual review.
+- **Personal data pipelines**: deduplicated a 90 GB, 14,000-file music library using SHA-256 hashes while keeping streaming-app playlists intact; built a provider-agnostic pipeline that normalises, scores and de-duplicates about 8,000 exported chat records into a searchable log.
 
 ## How I work
 
-AI coding agents (mainly Claude Code) are a core part of how I build, and I own the review and verification. Recent examples: a brand kit generated entirely from code (a script that converts the type to outlines, optically centres the marks, and renders every PNG and favicon from the SVG masters), and an apt repo pipeline that repacks package metadata, regenerates the index and re-signs the release in one run. Commits made with an agent carry a `Claude-Session:` trailer.
+Most of the work is debugging: reproducing the failure, reading logs, `dmesg` and boot traces, ruling causes out on real hardware, and pinning down what's actually wrong. Once I know the cause, I use AI coding agents (mainly Claude Code) to implement and iterate faster, and when a first fix doesn't hold, I go back to the evidence, narrow it down and steer the next attempt. I test every change on the device or system it's meant for before it ships.
+
+I also build tooling so the repetitive parts stay repeatable, like a brand kit generated entirely from code (outlined type, optically centred marks, every PNG and favicon rendered from SVG masters) and an apt repo pipeline that repacks package metadata, regenerates the index and re-signs the release in one run.
 
 ## Toolbox
 
