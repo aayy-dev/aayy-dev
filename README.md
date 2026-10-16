@@ -31,7 +31,7 @@ Work that lives on my own machines rather than in public repos:
 
 ## How I work
 
-AI coding agents (mainly Claude Code) are a core part of how I build, and I own the review and verification. A recent example: moving this account to a new username. That meant rewriting commit identities across 25 repositories while leaving upstream and signed commits byte-identical, pausing CI during the force-pushes, rebuilding and re-signing the apt repo, and generating this brand kit from code. Commits made in those sessions carry a `Claude-Session:` trailer.
+AI coding agents (mainly Claude Code) are a core part of how I build, and I own the review and verification. Recent examples: a brand kit generated entirely from code (a script that converts the type to outlines, optically centres the marks, and renders every PNG and favicon from the SVG masters), and an apt repo pipeline that repacks package metadata, regenerates the index and re-signs the release in one run. Commits made with an agent carry a `Claude-Session:` trailer.
 
 ## Toolbox
 
